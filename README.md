@@ -1,4 +1,14 @@
+# Docs
 
+Two files do the majority of the work the [CSV Importer](https://github.com/nemotests/nimbus/blob/main/openchargemap_import_csv.py) downloads and converts the JSON payload from the API into a flat structure.
+
+I didn't want to use a JSON structure in BigQuery because I worry about performance of nested JSON in queries. 
+
+
+The [GCS uploader](https://github.com/nemotests/nimbus/blob/main/gcs_uploader.py) takes the CSV data, uploads it to GCS to create a store, pushes it into Big Query and then adds the extra columns needed for Geography and Looker Studio
+
+
+# Thought process
 ## Datasets
 For datasets I initially thought I was going to use the National Charge Point Registry, but that was de-commissioned last year. OSM or Overture looked like good possible options but they lacked some the attribution consistency I think people would want.
 
