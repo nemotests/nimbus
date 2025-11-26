@@ -32,5 +32,7 @@ I looked at Superset but Superset has limited location based dashboarding functi
 
 Looker Studio seemed like a good option as it sticks to the Google ecosystem and was super easy to get up and running and very customisable as long as the data schema was setup in the right way. 
 
+Link: https://lookerstudio.google.com/s/ijbfnCT5NU4
 
 <img width="3419" height="1287" alt="Screenshot 2025-11-26 124238" src="https://github.com/user-attachments/assets/5b6757ce-9db8-489c-b5ab-677b9b70a134" />
+
