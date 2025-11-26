@@ -8,6 +8,19 @@ I didn't want to use a JSON structure in BigQuery because I worry about performa
 The [GCS uploader](https://github.com/nemotests/nimbus/blob/main/gcs_uploader.py) takes the CSV data, uploads it to GCS to create a store, pushes it into Big Query and then adds the extra columns needed for Geography and Looker Studio
 
 
+# Setup:
+
+Would obviously flesh out with more time but simple instructions would be: 
+
+Pull the repo
+
+Populate the sample env file and rename to .env
+
+Ensure CLI Gcloud path varible set
+
+Run
+
+
 # Thought process
 ## Datasets
 For datasets I initially thought I was going to use the National Charge Point Registry, but that was de-commissioned last year. OSM or Overture looked like good possible options but they lacked some the attribution consistency I think people would want.
