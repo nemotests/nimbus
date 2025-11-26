@@ -1,4 +1,5 @@
-##Datasets
+
+## Datasets
 For datasets I initially thought I was going to use the National Charge Point Registry, but that was de-commissioned last year. OSM or Overture looked like good possible options but they lacked some the attribution consistency I think people would want.
 
 Open Charge Map looked like a good option and the API was serviceable if a little frustrating to get started with. 
@@ -7,14 +8,14 @@ All of the above have open permissible data licenses, Open Charge Map uses creat
 
 I think regardless of source you would probably want to create a blended harmonised dataset from a variety of sources including Overture etc. 
 
-##Tooling
+## Tooling
 If you were going to productionise a data pipeline I wouldn’t go down the route I did for the task, an orchestrator tool would be more appropriate, something like Airflow,Dagster or Apache Nifi.
 For the limited time allotted to the task creating a set of python scripts seemed like the easier option. If you wanted to productionise a cron job would let you have this running automatically obviously it could be orchestrated in a more controlled way than a cron job with more time. 
 
 Filter to London we could use Postcode or the geometry location. When pulling the data I used a tiled fetch approach around the M25 area. 
 The easiest method would probably be to use OS Boundary line, using the relevant polygon for Central London to do a simple attribute flag in the data using a point in polygon query. 
 
-##Data Validation
+## Data Validation
 The scripts to limited data validation, I think given more time I would create a meta data catalogue that included assumptions around each dataset you wanted to import, factors would include:
 •	Estimated expected number of rows
 •	Coverage
@@ -26,7 +27,7 @@ Strong schemas would let you verify the data on ingestion but erroneous data cou
 For spatial coverage a geohash created from the lat,long values rounded up for precision could easily let you spot potential gaps in the data for instance
 
 
-##Dashboards
+## Dashboards
 I looked at Superset but Superset has limited location based dashboarding functionality, it’s also based on Deck.GL which is notoriously hard to use. 
 
 Looker Studio seemed like a good option as it sticks to the Google ecosystem and was super easy to get up and running and very customisable as long as the data schema was setup in the right way. 
