@@ -20,6 +20,8 @@ Ensure CLI Gcloud path varible set
 
 Run
 
+Things I would do if I had more time: More comprehsive docs and fix the requirements against specific verisons to improve stability.
+
 
 # Thought process
 ## Datasets
